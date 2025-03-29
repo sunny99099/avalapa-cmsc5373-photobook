@@ -1,0 +1,78 @@
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-create">
+    Add New PhotoNote
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="modal-create" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-create-label" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-create-label">Add New PhotoNote</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form name="formAddNew">
+                    <div class="mb-3">
+                        <label class="form-label">Select a photo</label>
+                        <input type="file" required class="form-control" id="image-file" accept="image/*">
+                        <img id="image-preview" src="" height="200" class="d-inline-block">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" required class="form-control" name="caption"
+                            placeholder="Enter a caption for the photo">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="description" rows="10"
+                            placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="sharedWith" class="form-control"
+                            placeholder="shared with (optional)">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-outline-primary">Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal for edit -->
+<div class="modal fade" id="modal-edit" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="modal-edit-label" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="modal-edit-label">Edit PhotoNote</h1>
+                <button id="modal-edit-close-button" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form name="formEdit">
+                    <div class="mb-3">
+                        <div class="alert alert-warning" role="alert">
+                            <small>Image for browse only. To change the image, delete this photonote and create a new one</small>
+                            <img src="" height="400">
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" required class="form-control" name="caption"
+                            placeholder="Enter a caption for the photo">
+                    </div>
+                    <div class="mb-3">
+                        <textarea class="form-control" name="description" rows="10"
+                            placeholder="Enter description"></textarea>
+                    </div>
+                    <div class="mb-3">
+                        <input type="text" name="sharedWith" class="form-control"
+                            placeholder="shared with (optional)">
+                    </div>
+                    <div>
+                        <button type="submit" class="btn btn-outline-danger">Update</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
